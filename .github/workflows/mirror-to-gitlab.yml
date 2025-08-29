@@ -18,3 +18,8 @@ jobs:
         with:
           target_repo_url: git@gitlab.com:infinitetsukuyomi/all-about-disposables.git
           ssh_private_key: ${{ secrets.GITLAB_SSH_PRIVATE_KEY }}
+          # push ONLY main (no deletions), plus tags if you want
+          args: >-
+            --verbose
+            refs/heads/main:refs/heads/main
+            refs/tags/*:refs/tags/*
