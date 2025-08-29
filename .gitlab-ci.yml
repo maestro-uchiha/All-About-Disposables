@@ -1,12 +1,13 @@
-﻿# .gitlab-ci.yml
-stages: [deploy]
+﻿stages: [deploy]
+
 pages:
   stage: deploy
   image: alpine:3.19
   script:
     - mkdir -p public
-    - cp -r parametric-static/. public/
+    - cp -r parametric-static/* public/
   artifacts:
-    paths: [public]
-  rules:
-    - if: '$CI_COMMIT_BRANCH'   # run on any branch push
+    paths:
+      - public
+  only:
+    - main
