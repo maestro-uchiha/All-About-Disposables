@@ -16,5 +16,5 @@ jobs:
 
       - uses: pixta-dev/repository-mirroring-action@v1
         with:
-          target_repo_url: git@gitlab.com:tsukuyomi3/infinite-tsukuyomi.git
+          target_repo_url: git@gitlab.com:infinitetsukuyomi/infinite-tsukuyomi.git
           ssh_private_key: ${{ secrets.GITLAB_SSH_PRIVATE_KEY }}
